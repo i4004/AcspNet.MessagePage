@@ -2,6 +2,7 @@
 using AcspNet.Attributes;
 using AcspNet.Modules.Html;
 using AcspNet.Responses;
+using Microsoft.Owin;
 using MessageBox = AcspNet.Responses.MessageBox;
 
 namespace AcspNet.MessagePage.Controllers
@@ -37,8 +38,8 @@ namespace AcspNet.MessagePage.Controllers
 			if (string.IsNullOrEmpty(message) || string.IsNullOrEmpty(messageStatus))
 				return new Redirect();
 
-			Context.Response.Cookies.Delete(MessageFieldName);
-			Context.Response.Cookies.Delete(MessageStatusFieldName);
+			Context.Response.Cookies.Delete(MessageFieldName, new CookieOptions { Expires = DateTime.Now.AddDays(-1D) });
+			Context.Response.Cookies.Delete(MessageStatusFieldName, new CookieOptions { Expires = DateTime.Now.AddDays(-1D) });
 
 			MessageBoxStatus status;
 
