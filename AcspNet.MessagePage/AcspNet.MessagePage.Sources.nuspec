@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>AcspNet.MessagePage.Sources</id>
+		<version>$version$</version>
+		<title>AcspNet.MessagePage.Sources</title>
+		<authors>Alexander Krylkov</authors>
+		<owners>Alexander Krylkov</owners>
+		<projectUrl>https://github.com/i4004/AcspNet.MessagePage</projectUrl>
+		<iconUrl>https://raw.github.com/i4004/AcspNet/master/Images/Icon.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>AcspNet message page control.</description>
+		<summary>AcspNet message page control.</summary>
+		<releaseNotes></releaseNotes>
+		<copyright>Licensed under LGPL</copyright>
+		<language>en-US</language>
+		<tags>ACSP.NET</tags>
+	</metadata>
+	<files>
+		<file src="Controllers/MessagePageController.cs" target="content/Controllers/App_Packages/AcspNet.MessagePage/MessagePageController.cs" />
+		<file src="Responses/RedirectToMessagePage.cs" target="content/Responses/App_Packages/AcspNet.MessagePage/RedirectToMessagePage.cs" />
+	</files>
+</package>
