@@ -7,6 +7,17 @@ AcspNet.MessagePage
 
 Available at NuGet as [source package](https://www.nuget.org/packages/AcspNet.MessagePage.Sources/)
 
+```csharp
+	public class MyController : Controller
+	{
+		public override ControllerResponse Invoke()
+		{
+            // User will be redirected to message page controller on '/message' and message will be displayed with MessageBox class
+			return new RedirectToMessagePage("Some message");
+		}
+	}
+```
+
 Status
 ===
  .NET (4.5) .... Mono (3.8.0)
